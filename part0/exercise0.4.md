@@ -1,7 +1,7 @@
 Sequence Diagram
   the client clicked on the link ("https://studies.cs.helsinki.fi/exampleapp/notes")
   
-  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     // the browser sent a request to the server get the web page " /notes " 
     
   activate server
@@ -21,7 +21,7 @@ Sequence Diagram
     
   deactivate server
 
-  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
       // the browser read the script tag which contains src to the js file ("main.js") so it sent a request to the server to get that file
   
   activate server
