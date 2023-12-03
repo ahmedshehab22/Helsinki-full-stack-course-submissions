@@ -1,7 +1,7 @@
 Sequence Diagram
-  the client clicked on the link ("https://studies.cs.helsinki.fi/exampleapp/notes")
+  the client clicked on the link ("https://studies.cs.helsinki.fi/exampleapp/spa")
   
-  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     // the browser sent a request to the server get the web page " /notes " 
     
   activate server
@@ -21,7 +21,7 @@ Sequence Diagram
     
   deactivate server
 
-  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
       // the browser read the script tag which contains src to the js file ("main.js") so it sent a request to the server to get that file
   
   activate server
@@ -48,7 +48,7 @@ Sequence Diagram
 
   the request will not be sent directly from the form the js code will prevent the default action of the form and will add the note firstly to the dom and the will make a post request to the server
   
-  browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note 
+  browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
   
   activate server
   
