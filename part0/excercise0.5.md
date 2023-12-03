@@ -43,16 +43,3 @@ Sequence Diagram
   
   deactivate server
   * after the data was sent successfully the event triggered and the js will append the data to the html document using DOM apis
-
-  the client starts to write a note in the text field and then he sumbitted it as the code was written by the old style so the html will direct a post request to "/new_note"
-
-  the request will not be sent directly from the form the js code will prevent the default action of the form and will add the note firstly to the dom and the will make a post request to the server
-  
-  browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note 
-  
-  activate server
-  
-  server-->>browser: status code 201
-    // the post request was successfull the js 
-  
-  deactivate server
